@@ -8,11 +8,12 @@ const Hero = () => {
   const { user } = useSelector((state) => state.auth);
 
   const logos = [
-    { name: "Google", src: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/google.svg" },
-    { name: "Microsoft", src: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/microsoft.svg" },
-    { name: "LinkedIn", src: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linkedin.svg" },
-    { name: "Indeed", src: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/indeed.svg" },
-    { name: "Upwork", src: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/upwork.svg" },
+    { name: "Google", src: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/google.svg", },
+    { name: "Microsoft", src: "/microsoft.png", },
+    { name: "LinkedIn", src: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linkedin.svg", },
+    { name: "Indeed", src: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/indeed.svg", },
+    { name: "Glassdoor", src: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/glassdoor.svg", },
+    { name: "GitHub", src: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/github.svg", },
   ];
 
   const navLinks = [
@@ -65,9 +66,8 @@ const Hero = () => {
       </nav>
 
       <div
-        className={`fixed inset-0 z-50 bg-slate-950/95 text-white flex flex-col items-center justify-center gap-8 md:hidden transition-transform duration-300 ${
-          menuOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed inset-0 z-50 bg-slate-950/95 text-white flex flex-col items-center justify-center gap-8 md:hidden transition-transform duration-300 ${menuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         {navLinks.map((link) => (
           <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>
